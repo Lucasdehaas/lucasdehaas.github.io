@@ -1,0 +1,560 @@
+/* ======================================= */
+/* 🎨 Dark Neo Theme - Style.css          */
+/* ======================================= */
+
+/* 1. Variabelen en Basis Reset (DARK NEO) */
+:root {
+    --primary-color: #00FFC2;
+    /* Fel Neon Groen/Cyaan voor actie */
+    --accent-blue: #00FFFF;
+    /* Helderste Neon Blauw voor highlights */
+    --background-dark: #0A0A0A;
+    /* Diepe, bijna zwarte achtergrond */
+    --secondary-dark: #1A1A1A;
+    /* Card/section achtergrond */
+    --text-light: #E0E0E0;
+    /* Lichtgrijze tekst */
+    --text-muted: #888888;
+    /* Gedempte tekst/datum kleur */
+    --font-family: 'Consolas', 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 60px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--background-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 2. Algemene Sectie Styling */
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-dark {
+    background: var(--secondary-dark);
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--accent-blue);
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* 3. Vaste Navbar */
+#navbar {
+    background: var(--background-dark);
+    color: var(--text-light);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 90;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+}
+
+#navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 4px rgba(0, 255, 194, 0.7);
+    margin-bottom: 0;
+}
+
+.nav-divider {
+    display: none;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+#navbar ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 20px 15px;
+    margin: 0 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: var(--accent-blue);
+    background-color: #2c2c2c;
+    text-shadow: 0 0 3px var(--accent-blue);
+}
+
+
+/* 4. Header & Hero - OPGERUIMD */
+#hero {
+    background: var(--secondary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 180px 0 80px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.hero-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+#hero h1 {
+    font-size: 3.8em;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 194, 0.8);
+}
+
+#hero h2 {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--text-muted);
+}
+
+.social-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+    text-shadow: 0 0 5px var(--accent-blue);
+}
+
+/* 5. Over Mij Sectie - AANGEPAST */
+#about {
+    padding-bottom: 20px;
+    text-align: center;
+    /* Zorgt dat de foto en tekst centreren */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* NIEUWE STIJL VOOR DE KLEINE CIRKEL FOTO IN DE 'OVER MIJ' SECTIE */
+.about-profile-photo {
+    width: 120px;
+    /* Kleinere afmeting */
+    height: 120px;
+    margin: 0px auto 25px;
+    /* Centraal boven de tekst */
+    display: block;
+
+    border-radius: 50%;
+    /* Maak het een cirkel */
+    overflow: hidden;
+
+    /* Neon rand en schaduw */
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 12px rgba(0, 255, 194, 0.9), 0 0 20px rgba(0, 255, 194, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-blue);
+}
+
+.about-profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+#about p {
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+#about p:first-child {
+    font-size: 1.1em;
+    color: var(--text-light);
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+
+/* 6. Skills Grid */
+#skills {
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    background: var(--secondary-dark);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    border-color: var(--accent-blue);
+}
+
+.skill-item i {
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px var(--accent-blue);
+}
+
+
+/* 7. Projecten & Ervaring Timelines */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--accent-blue);
+    padding: 0 20px 30px 20px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    border: 3px solid var(--background-dark);
+    left: -9px;
+    top: 0;
+    box-shadow: 0 0 8px var(--accent-blue);
+}
+
+.timeline-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.timeline-item .company {
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.timeline-item .date,
+.timeline-item .tech-stack {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    list-style-type: square;
+    margin-left: 20px;
+    padding-top: 5px;
+    color: var(--text-muted);
+}
+
+/* Project Timeline Specifieke Stijl */
+.project-timeline-style .timeline-item {
+    border-left-color: var(--primary-color);
+    background: var(--secondary-dark);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px rgba(0, 255, 194, 0.2);
+}
+
+.project-timeline-style .timeline-item::before {
+    background: var(--primary-color);
+    border-color: var(--secondary-dark);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Award Tag */
+.award-tag {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    font-size: 0.7em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-shadow: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-links a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    margin-right: 15px;
+    transition: opacity 0.3s;
+    text-shadow: 0 0 3px var(--accent-blue);
+}
+
+.project-links a:hover {
+    opacity: 0.8;
+}
+
+
+/* 8. Contact Formulier */
+#contact form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    padding: 12px;
+    border: 1px solid var(--accent-blue);
+    background: var(--background-dark);
+    color: var(--text-light);
+    border-radius: 4px;
+    font-size: 1em;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+#contact ::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+#contact button {
+    background: var(--accent-blue);
+    color: var(--background-dark);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--accent-blue);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+#contact button:hover {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* 9. Footer */
+footer {
+    background: var(--background-dark);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--secondary-dark);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 10. Modaal (Pop-up) Venster Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: var(--background-dark);
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: 0 0 25px rgba(0, 255, 194, 0.7);
+}
+
+.modal-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.modal-content p,
+.modal-content ul {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.modal-content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+}
+
+.close-button {
+    color: var(--text-light);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* 11. RESPONSIVENESS - Media Query (Mobiel) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Navbar aanpassing op mobiel: Stapel elementen gecentreerd */
+    #navbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    #navbar .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Toon de lijn op mobiel */
+    .nav-divider {
+        display: block;
+        width: 80%;
+        max-width: 150px;
+        height: 1px;
+        border: none;
+        background-color: var(--text-muted);
+        box-shadow: 0 0 2px var(--text-muted);
+        margin: 5px 0 10px 0;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 0;
+    }
+
+    #hero {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero h2 {
+        font-size: 1.1em;
+    }
+
+    .social-links a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        margin-left: 0;
+        max-width: 95%;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+    }
+}
